@@ -31,7 +31,7 @@ public class Apple {
         this.weight = weight;
     }
 
-    public java.lang.String toString() {
+    public String toString() {
         return "Apple{" +
                 "color='" + color + '\'' +
                 ", weight=" + weight +
