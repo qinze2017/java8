@@ -30,4 +30,12 @@ public class Apple {
     public void setWeight(long weight) {
         this.weight = weight;
     }
+
+    @java.lang.Override
+    public java.lang.String toString() {
+        return "Apple{" +
+                "color='" + color + '\'' +
+                ", weight=" + weight +
+                '}';
+    }
 }
