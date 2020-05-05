@@ -31,7 +31,6 @@ public class Apple {
         this.weight = weight;
     }
 
-    @java.lang.Override
     public java.lang.String toString() {
         return "Apple{" +
                 "color='" + color + '\'' +
