@@ -1,4 +1,4 @@
-package com.ze.java;
+package com.ze.java8;
 
 /**
  * #author:qinze
@@ -6,9 +6,14 @@ package com.ze.java;
  * @date:2020-05-05
  * @description:
  **/
+
 public class Apple {
+
     private String color;
     private long weight;
+
+    public Apple() {
+    }
 
     public Apple(String color, long weight) {
         this.color = color;
@@ -31,6 +36,7 @@ public class Apple {
         this.weight = weight;
     }
 
+    @Override
     public String toString() {
         return "Apple{" +
                 "color='" + color + '\'' +
