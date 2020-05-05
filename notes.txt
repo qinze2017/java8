@@ -25,3 +25,11 @@ Choose Class
  * @date:${DATE}
  * @description:
  **/
+
+Git remove old origin :
+git add .
+git status
+git commit -m "xxx"
+git remote rm origin
+git remote add origin xxx.git
+git push -u origin master
