@@ -1,4 +1,4 @@
-package com.ze.java8;
+package com.ze.java;
 
 /**
  * #author:qinze
