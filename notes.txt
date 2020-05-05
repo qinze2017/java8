@@ -33,3 +33,10 @@ git commit -m "xxx"
 git remote rm origin
 git remote add origin xxx.git
 git push -u origin master
+
+To check out master branch :
+git checkout master
+Overwrite "master" with new_branch :
+git reset --hard new_branch
+Force the push to your remote repository :
+git push -f origin master
