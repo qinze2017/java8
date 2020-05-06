@@ -126,5 +126,11 @@ Pipelining(Lazy construction, short-circuiting), Internal iteration
 Intermediate operations: distinct, sorted, peek, filter, map, limit, mapToInt, skip, anyMatch, allMatch, noneMatch, findFirst, findAny, builder, empty, of, max, min, reduce, collect, count
 Terminal oprations: forEach, forEachOrdered, collect
 
-Filtering, slicing, matching
+Streams from collections
+Streams from values
+Streams from arrays
+Streams from Files
+Streams from generate, Iterator
 
+Random : ints return IntStream
+SplitAsStream return Stream<String>
