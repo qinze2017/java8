@@ -45,8 +45,6 @@ Test Memory usage :
 >> jps -l
 >> jstat -gcutil XXXX 1000 10
 
-Ctrl+N to check Class
-
 @FunctionalInterface Functional Interface could have default and static, but have only one method.  
 
 parameter list       arrow       lambda body
@@ -91,4 +89,17 @@ public interface Test {
 () -> ""
 () -> {return "";}
 
+How to find the src.zip and show in the Intellij IDEA :
+File -> Project Structure -> SDKs 
+Add jdk\lib\src.zip to the Classpath
+Ctrl+N to check Class and its path
+Click "Scroll from source" to check the source directly
+
+Predicate boolean test(T t); BiPredicate, IntPredicate(int), LongPredicate, DoublePredicate 
+
+Consumer accept(T t);
+
+Function<T,R> R apply(T t); IntFunction, BiFunction
+
+Supplier<T> T get();
 
