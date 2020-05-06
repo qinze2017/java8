@@ -103,3 +103,14 @@ Function<T,R> R apply(T t); IntFunction, BiFunction
 
 Supplier<T> T get();
 
+Comparator :
+1.
+list.sort(new Comparator<Apple> {
+	public void compare(Apple o1, Apple o2){
+		return o1.getColor().compareTo(o2.getColor());
+	}
+});
+2.
+list.sort((a1,a2) -> a1.getColor().compareTo(a2.getColor()));
+3.
+list.sort(Comparator.comparing(Apple:getColor));
