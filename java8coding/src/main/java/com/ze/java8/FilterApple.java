@@ -18,6 +18,10 @@ public class FilterApple {
 
         boolean filter(Apple apple);
 
+        /*default void print(String var) {
+            System.out.println(var);
+        }*/
+
     }
 
     public static List<Apple> findApple(List<Apple> apples, AppleFilter appleFilter) {
@@ -71,7 +75,7 @@ public class FilterApple {
         return list;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         List<Apple> list = Arrays.asList(new Apple("green", 150), new Apple("yellow", 120), new Apple("green", 170));
         /*List<Apple> greenApples = findGreenApple(list);
         assert greenApples.size() == 2;*/
@@ -94,10 +98,21 @@ public class FilterApple {
 
         System.out.println(yellowList);*/
 
-        List<Apple> lambdaResult = findApple(list, (Apple apple) -> {
+        /*List<Apple> lambdaResult = findApple(list, (Apple apple) -> {
             return apple.getColor().equals("green");
         });
 
-        System.out.println(lambdaResult);
+        System.out.println(lambdaResult);*/
+
+        new Thread(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println(Thread.currentThread().getName());
+            }
+        }).start();
+
+        new Thread(() -> System.out.println(Thread.currentThread().getName())).start();
+
+        Thread.currentThread().join();
     }
 }

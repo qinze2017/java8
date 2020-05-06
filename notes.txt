@@ -44,3 +44,7 @@ git push -f origin master
 Test Memory usage :
 >> jps -l
 >> jstat -gcutil XXXX 1000 10
+
+Ctrl+N to check Class
+
+Interface could have default and static, but have only one method.  
