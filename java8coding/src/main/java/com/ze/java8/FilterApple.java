@@ -102,6 +102,10 @@ public class FilterApple {
             return apple.getColor().equals("green");
         });
 
+        List<Apple> lambdaResult = findApple(list, (Apple apple) ->
+            apple.getColor().equals("green");
+        });
+
         System.out.println(lambdaResult);*/
 
         new Thread(new Runnable() {

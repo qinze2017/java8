@@ -48,3 +48,47 @@ Test Memory usage :
 Ctrl+N to check Class
 
 @FunctionalInterface Functional Interface could have default and static, but have only one method.  
+
+parameter list       arrow       lambda body
+ (o1, o2)            ->          o1.getColor().compareTo(o2.getColor())
+ 
+ Consumer, Function, Predicate, Supplier, BiFunction, DoubleBinaryOperator, Streams(Spliterator), 
+ Comparator, Collectors, Sink, Ops
+ 
+ Function : 
+ 
+ Function<String, Integer> flambda = s -> s.length();
+ Fucntion<Apple, Boolean> f = (a) -> a.getColor().equals("green");
+ 
+ Predicate : 
+ 
+ Predicate<Apple> p = (Apple a) -> a.getColor().equals("green");
+ 
+ Supplier :
+ 
+ Supplier<Apple> s = Apple::new;
+
+ 
+ @FunctionalInterface
+ public interface Test {
+    public void fun(int x, int y);
+ }
+ 
+		(int x, int y) -> {
+            System.out.println(x);
+            System.out.println(y);
+        };
+ 
+public interface Test {
+	public void fun();
+}
+
+() -> 88
+
+(parameters) -> expression
+(parameters) -> {statements;}
+() -> {}
+() -> ""
+() -> {return "";}
+
+
