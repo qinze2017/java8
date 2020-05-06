@@ -117,3 +117,14 @@ list.sort((a1,a2) -> a1.getColor().compareTo(a2.getColor()));
 3.
 list.sort(Comparator.comparing(Apple:getColor));
 
+Streams : collections, I/O, etc
+Sequence of elements: Dish
+Source: menu
+Data processing operations: filter, map, sorted, limit, collect
+Pipelining(Lazy construction, short-circuiting), Internal iteration
+
+Intermediate operations: distinct, sorted, peek, filter, map, limit, mapToInt, skip, anyMatch, allMatch, noneMatch, findFirst, findAny, builder, empty, of, max, min, reduce, collect, count
+Terminal oprations: forEach, forEachOrdered, collect
+
+Filtering, slicing, matching
+
