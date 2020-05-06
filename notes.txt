@@ -17,6 +17,10 @@ Add Comments :
 
 File-->settings-->Editor-->File and Code Templates-->Files
 
+sout : System.out.println();
+main : main class
+alt + enter (two times) || ctrl + alt + v + enter
+
 Choose Class
 
 /**
@@ -134,3 +138,5 @@ Streams from generate, Iterator
 
 Random : ints return IntStream
 SplitAsStream return Stream<String>
+
+filter, map, flatMap
