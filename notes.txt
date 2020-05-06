@@ -40,3 +40,7 @@ Overwrite "master" with new_branch :
 git reset --hard new_branch
 Force the push to your remote repository :
 git push -f origin master
+
+Test Memory usage :
+>> jps -l
+>> jstat -gcutil XXXX 1000 10

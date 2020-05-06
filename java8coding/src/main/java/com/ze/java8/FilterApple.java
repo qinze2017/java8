@@ -13,6 +13,7 @@ import java.util.List;
 
 public class FilterApple {
 
+    @FunctionalInterface
     public interface AppleFilter {
 
         boolean filter(Apple apple);
@@ -81,7 +82,7 @@ public class FilterApple {
         List<Apple> redApples = findApple(list, "red");
         System.out.println(redApples);*/
 
-        List<Apple> result = findApple(list, new GreenAnd160WeightFilter());
+       /* List<Apple> result = findApple(list, new GreenAnd160WeightFilter());
         System.out.println(result);
 
         List<Apple> yellowList = findApple(list, new AppleFilter() {
@@ -91,6 +92,12 @@ public class FilterApple {
             }
         });
 
-        System.out.println(yellowList);
+        System.out.println(yellowList);*/
+
+        List<Apple> lambdaResult = findApple(list, (Apple apple) -> {
+            return apple.getColor().equals("green");
+        });
+
+        System.out.println(lambdaResult);
     }
 }
