@@ -45,6 +45,8 @@ Test Memory usage :
 >> jps -l
 >> jstat -gcutil XXXX 1000 10
 
+Tool JConsole to verify thread and process
+
 @FunctionalInterface Functional Interface could have default and static, but have only one method.  
 
 parameter list       arrow       lambda body
@@ -114,3 +116,4 @@ list.sort(new Comparator<Apple> {
 list.sort((a1,a2) -> a1.getColor().compareTo(a2.getColor()));
 3.
 list.sort(Comparator.comparing(Apple:getColor));
+
