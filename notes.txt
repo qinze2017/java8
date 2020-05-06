@@ -53,7 +53,7 @@ parameter list       arrow       lambda body
  (o1, o2)            ->          o1.getColor().compareTo(o2.getColor())
  
  Consumer, Function, Predicate, Supplier, BiFunction, DoubleBinaryOperator, Streams(Spliterator), 
- Comparator, Collectors, Sink, Ops
+ Comparator, Collectors, Sink, Ops, Fork join
  
  Function : 
  
