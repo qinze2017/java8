@@ -47,4 +47,4 @@ Test Memory usage :
 
 Ctrl+N to check Class
 
-Interface could have default and static, but have only one method.  
+@FunctionalInterface Functional Interface could have default and static, but have only one method.  
