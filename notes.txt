@@ -144,6 +144,8 @@ filter, map, flatMap, limit, distinct
 match{boolean [NoneMatch|anyMatch|allMatch]}, find (return Optional), reduce
 sum, count, max, min
 
+Numeric Stream
+
 IntStream
 DoubleStream
 LongStream
