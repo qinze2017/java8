@@ -139,4 +139,11 @@ Streams from generate, Iterator
 Random : ints return IntStream
 SplitAsStream return Stream<String>
 
-filter, map, flatMap
+Stream :
+filter, map, flatMap, limit, distinct
+match{boolean [NoneMatch|anyMatch|allMatch]}, find (return Optional), reduce
+sum, count, max, min
+
+IntStream
+DoubleStream
+LongStream
