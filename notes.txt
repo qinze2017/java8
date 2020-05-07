@@ -149,3 +149,5 @@ Numeric Stream
 IntStream
 DoubleStream
 LongStream
+
+Optional API
