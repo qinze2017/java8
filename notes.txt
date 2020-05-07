@@ -150,4 +150,5 @@ IntStream
 DoubleStream
 LongStream
 
-Optional API
+Optional API :
+of, empty, ofNullable{of/empty}, get, orElse, orElseGet, orElseThrow
