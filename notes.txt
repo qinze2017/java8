@@ -152,3 +152,8 @@ LongStream
 
 Optional API :
 of, empty, ofNullable{of/empty}, get, orElse, orElseGet, orElseThrow
+
+map {Option{Option{U}}}
+flatMap {Option{U}}
+
+Function programming style : You just tell "how to do" not "do what".

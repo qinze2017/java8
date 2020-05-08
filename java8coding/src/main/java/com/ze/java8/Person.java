@@ -1,5 +1,7 @@
 package com.ze.java8;
 
+import java.util.Optional;
+
 /**
  * #author:qinze
  *
@@ -9,9 +11,9 @@ package com.ze.java8;
 
 public class Person {
 
-    private Car car;
+    private Optional<Car> car;
 
-    public Car getCar() {
+    public Optional<Car>  getCar() {
         return car;
     }
 }
