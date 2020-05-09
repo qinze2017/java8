@@ -173,4 +173,5 @@ collectingAndThen
 counting
 groupingBy
 
-Hashtable is safe thread
+Hashtable is thread safe 
+If a thread safe is not needed in your application then go through HashMap
