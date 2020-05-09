@@ -1,8 +1,8 @@
 package com.ze.java8;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * #author:qinze
@@ -76,7 +76,22 @@ public class FilterApple {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        List<Apple> list = Arrays.asList(new Apple("green", 150), new Apple("yellow", 120), new Apple("green", 170));
+        List<Apple> list = Arrays.asList(new Apple("green", 150)
+                , new Apple("yellow", 120)
+                , new Apple("green", 170)
+                , new Apple("green", 150)
+                , new Apple("yellow", 120)
+                , new Apple("green", 170));
+
+        List<Apple> greenList = list.stream().filter(a -> a.getColor().equals("green")).collect(Collectors.toList());
+        Optional.ofNullable(greenList).ifPresent(System.out::println);
+
+        Optional.ofNullable(groupByNormal(list)).ifPresent(System.out::println);
+
+        Optional.ofNullable(groupByFunction(list)).ifPresent(System.out::println);
+
+        Optional.ofNullable(groupByCollector(list)).ifPresent(System.out::println);
+        
         /*List<Apple> greenApples = findGreenApple(list);
         assert greenApples.size() == 2;*/
 
@@ -108,7 +123,7 @@ public class FilterApple {
 
         System.out.println(lambdaResult);*/
 
-        new Thread(new Runnable() {
+        /*new Thread(new Runnable() {
             @Override
             public void run() {
                 System.out.println(Thread.currentThread().getName());
@@ -117,6 +132,38 @@ public class FilterApple {
 
         new Thread(() -> System.out.println(Thread.currentThread().getName())).start();
 
-        Thread.currentThread().join();
+        Thread.currentThread().join();*/
+    }
+
+    private static Map<String, List<Apple>> groupByNormal(List<Apple> apples){
+        Map<String, List<Apple>> map = new HashMap<>();
+        for ( Apple apple : apples) {
+            List<Apple> list = map.get(apple.getColor());
+            if (null == list) {
+                list = new ArrayList<>();
+                map.put(apple.getColor(), list);
+            }
+            list.add(apple);
+        }
+
+        return map;
+    }
+
+    private static Map<String, List<Apple>> groupByFunction(List<Apple> apples){
+        Map<String, List<Apple>> map = new HashMap<>();
+        apples.stream().forEach(a -> {
+            List<Apple> colorList = Optional.ofNullable(map.get(a.getColor())).orElseGet(() -> {
+                List<Apple> list = new ArrayList<>();
+                map.put(a.getColor(), list);
+                return list;
+            });
+            colorList.add(a);
+        });
+        return map;
+    }
+
+    private static Map<String, List<Apple>> groupByCollector(List<Apple> apples){
+
+        return apples.stream().collect(Collectors.groupingBy(Apple::getColor));
     }
 }

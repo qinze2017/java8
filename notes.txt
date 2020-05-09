@@ -157,3 +157,11 @@ map {Option{Option{U}}}
 flatMap {Option{U}}
 
 Function programming style : You just tell "how to do" not "do what".
+
+list.stream().collect(Collectors.groupingBy(Function)); 
+
+Collector: 
+Reducing and summarizing stream elements to a single value
+Grouping elements
+Partitioning elements
+User custom the Collector
