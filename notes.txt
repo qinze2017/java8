@@ -173,4 +173,4 @@ collectingAndThen
 counting
 groupingBy
 
-20
+Hashtable is safe thread
