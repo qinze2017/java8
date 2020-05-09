@@ -7,7 +7,6 @@ package com.ze.java8;
  * @description:
  **/
 
-public class collectorIntroduce {
-
+public class CollectorsAction {
 
 }
