@@ -165,3 +165,12 @@ Reducing and summarizing stream elements to a single value
 Grouping elements
 Partitioning elements
 User custom the Collector
+
+averagingDouble
+averagingInt
+averagingLong
+collectingAndThen
+counting
+groupingBy
+
+20
