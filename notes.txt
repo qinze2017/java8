@@ -176,4 +176,22 @@ groupingBy
 Hashtable is thread safe 
 If a thread safe is not needed in your application then go through HashMap
 
-23
+Collector : 
+Supplier, accumulator, finisher, combiner, characteristics
+
+CONCURRENT, UNORDERED, IDENTITY_FINISH
+
+Start 
+-> Container = collector.supplier().get();  
+-> verify if there are more items ? 
+{Yes -> T next = fetch next stream's item -> collector.accumulator().accept(accumulator, next)}*
+No -> R result = collector.finisher().apply(accumulator); ->return result;
+
+Fork Join
+
+{Split the steam in 2 subpars}* 
+-> R r1 = collector.combiner().apply(acc1, acc2); R r2 = collector.combiner().apply(acc3, acc4);
+-> A accumulator = collector.combiner().apply(r1, r2);
+-> R result = collector.finisher().apply(accumulator);
+
+24
