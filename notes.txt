@@ -193,3 +193,16 @@ Fork Join
 -> R r1 = collector.combiner().apply(acc1, acc2); R r2 = collector.combiner().apply(acc3, acc4);
 -> A accumulator = collector.combiner().apply(r1, r2);
 -> R result = collector.finisher().apply(accumulator);
+
+
+System.setProperty("java.util.concurrent.ForkJoinPool.common.parallelism", "12");
+
+Steam : parallel
+ArrayList Excellent
+LinkedList Poor
+InStream.range Excellent
+Stream.iterator Poor
+HashSet Good
+TreeSet Good
+
+26
