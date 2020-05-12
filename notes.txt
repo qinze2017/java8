@@ -193,5 +193,3 @@ Fork Join
 -> R r1 = collector.combiner().apply(acc1, acc2); R r2 = collector.combiner().apply(acc3, acc4);
 -> A accumulator = collector.combiner().apply(r1, r2);
 -> R result = collector.finisher().apply(accumulator);
-
-24
