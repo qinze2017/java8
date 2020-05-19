@@ -227,3 +227,5 @@ Generic methods are methods that introduce their own type parameters. This is si
 
 Generic method
 class Base<T> {} 
+
+Daemon Thread
