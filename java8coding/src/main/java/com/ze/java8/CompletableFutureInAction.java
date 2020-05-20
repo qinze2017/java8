@@ -41,6 +41,8 @@ public class CompletableFutureInAction {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        return RANDOM.nextDouble();
+        double result = RANDOM.nextDouble();
+        System.out.println(result);
+        return result;
     }
 }
