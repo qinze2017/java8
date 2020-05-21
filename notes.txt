@@ -230,3 +230,20 @@ class Base<T> {}
 
 Daemon Thread
 
+API:
+supplyAsync
+thenApply
+whenComplete
+handle
+thenRun
+thenAccept
+thenCompose
+thenCombine
+thenAcceptBoth
+
+runAfterBoth
+applyToEither
+acceptEither
+runAfterEither
+anyOf
+allOf
